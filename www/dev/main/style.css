@@ -2,6 +2,7 @@
 COLOR SCHEME
 */
 body {
+  font-family: 'Raleway', sans-serif;
   background: #70c6e9;
   -webkit-touch-callout: none;
   /* prevent callout to copy image, etc when tap to hold */
@@ -97,6 +98,12 @@ body {
 }
 #extras p span {
   float: right;
+}
+@media (min-width: 992px) {
+  #extras {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 /* Animations */
 @keyframes slideIn {
