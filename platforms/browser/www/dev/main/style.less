@@ -6,7 +6,12 @@ COLOR SCHEME
 @gray: #4b5054;
 @yellow: #f2bc53;
 @rose: #ec7262;
+@green: #72ca6d;
 @darkblue: #15a1c5;
+@xl: 48px;
+@lg: 32px;
+@md: 24px;
+@sm: 18px;
 body {
     background: @blue;
     -webkit-touch-callout: none;
@@ -20,13 +25,15 @@ body {
     margin: 0px;
     padding: 0px;
     width: 100%;
+    color: white;
 }
 
 
 /* Page Style */
 
 .page {
-    max-width: 640px;
+    margin-top: 20%;
+    max-width: 840px;
     min-width: 320px;
 }
 
@@ -49,11 +56,12 @@ body {
     margin-left: 10%;
     height: auto;
     position: relative;
-    color: white;
     border-radius: 50%;
     -webkit-box-shadow: inset 0px 0px 0px 20px @gray;
     -moz-box-shadow: inset 0px 0px 0px 20px @gray;
     box-shadow: inset 0px 0px 0px 20px @gray;
+    background-color: @rose;
+    transition: background-color 0.5s ease;
     .arrow {
         width: 80%;
         height: 80%;
@@ -77,36 +85,40 @@ body {
         width: 100%;
         text-align: center;
         .wind_avg {
-            font-size: 48px;
+            font-size: @xl;
         }
         .wind_dir {
-            font-size: 24px;
-            letter-spacing: 10px;
+            font-size: @md;
+            letter-spacing: 5px;
             text-transform: uppercase;
         }
         .wind_unit {
-            font-size: 18px;
-            letter-spacing: 10px;
+            font-size: @sm;
+            letter-spacing: 5px;
         }
     }
 }
 
-.wind_data {
-    position: absolute;
-    top: 30%;
-    width: 100%;
-    text-align: center;
-    .wind_avg {
-        font-size: 48px;
-    }
-    .wind_dir {
-        font-size: 24px;
-        letter-spacing: 10px;
-        text-transform: uppercase;
-    }
-    .wind_unit {
-        font-size: 18px;
-        letter-spacing: 10px;
+#compass.good-wind {
+    background-color: @green;
+    transition: background-color 0.5s ease;
+}
+
+
+/* Extra Data */
+
+#extras {
+    width: 80%;
+    margin-top: 10%;
+    margin-left: 10%;
+    p {
+        font-size: @md;
+        label {
+            width: 160px;
+        }
+        span {
+            float: right
+        }
     }
 }
 

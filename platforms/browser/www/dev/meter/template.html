@@ -1,18 +1,30 @@
 <!-- Meter Page Content -->
-<div id="compass">
+<div class="col-md-8">
 
-    <div class="wind_data">
-        <div class="wind_unit">{{settings.wind}}</div>
-        <div class="wind_avg">{{windData.wind_avg}} </div>
-        <div class="wind_dir">{{windData.wind_direction_string}}</div>
+
+    <div id="compass" ng-class="{'good-wind': windData.wind_avg > 4.5}">
+
+        <div class="wind_data">
+            <div class="wind_unit">{{settings.wind}}</div>
+            <div class="wind_avg">{{windData.wind_avg}} </div>
+            <div class="wind_dir">{{windData.wind_direction_string}}</div>
+        </div>
+        <div class="arrow" rotate degrees="windData.wind_direction + settings.offset"></div>
     </div>
-    <div class="arrow" rotate degrees="windData.wind_direction + settings.offset"></div>
+
 </div>
 
-<p>Wind Min: {{windData.wind_min}}</p>
-<p>Wind max: {{windData.wind_max}}</p>
+<div class="col-md-4">
+    <div id="extras">
+        <p>
+            <label>WIND MIN</label> {{windData.wind_min}} <span>{{settings.wind}}</span></p>
+        <p>
+            <label>WIND GUST</label> {{windData.wind_max}} <span>{{settings.wind}}</span></p>
 
 
 
-<p>{{windData.temperature}}</p>
-<p>{{windData.datetime}}</p>
+        <p>
+            <label>Temperature</label> {{windData.temperature}} <span>{{settings.temp}}</span></p>
+
+    </div>
+</div>

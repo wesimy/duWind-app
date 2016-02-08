@@ -4,6 +4,7 @@
 COLOR SCHEME
 */
 body {
+  font-family: 'Raleway', sans-serif;
   background: #70c6e9;
   -webkit-touch-callout: none;
   /* prevent callout to copy image, etc when tap to hold */
@@ -43,7 +44,8 @@ body {
   -webkit-box-shadow: inset 0px 0px 0px 20px #4b5054;
   -moz-box-shadow: inset 0px 0px 0px 20px #4b5054;
   box-shadow: inset 0px 0px 0px 20px #4b5054;
-  background: #ec7262;
+  background-color: #ec7262;
+  transition: background-color 0.5s ease;
 }
 #compass .arrow {
   width: 80%;
@@ -81,7 +83,8 @@ body {
   letter-spacing: 5px;
 }
 #compass.good-wind {
-  background: #72ca6d;
+  background-color: #72ca6d;
+  transition: background-color 0.5s ease;
 }
 /* Extra Data */
 #extras {
@@ -97,6 +100,12 @@ body {
 }
 #extras p span {
   float: right;
+}
+@media (min-width: 992px) {
+  #extras {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 /* Animations */
 @keyframes slideIn {

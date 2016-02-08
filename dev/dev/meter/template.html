@@ -1,5 +1,5 @@
 <!-- Meter Page Content -->
-<div class="col-md-8">
+<div class="col-md-7">
 
 
     <div id="compass" ng-class="{'good-wind': windData.wind_avg > 4.5}">
@@ -14,7 +14,7 @@
 
 </div>
 
-<div class="col-md-4">
+<div class="col-md-5">
     <div id="extras">
         <p>
             <label>WIND MIN</label> {{windData.wind_min}} <span>{{settings.wind}}</span></p>
@@ -24,7 +24,7 @@
 
 
         <p>
-            <label>Temperature</label> {{windData.temperature}} <span>{{settings.temp}}</span></p>
+            <label>Temperature</label> {{windData.temperature}} <abbr>{{settings.temp}}</abbr></p>
 
     </div>
 </div>
