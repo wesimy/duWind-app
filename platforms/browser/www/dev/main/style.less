@@ -1,0 +1,136 @@
+/*
+COLOR SCHEME
+*/
+
+@blue: #70c6e9;
+@gray: #4b5054;
+@yellow: #f2bc53;
+@rose: #ec7262;
+@darkblue: #15a1c5;
+body {
+    background: @blue;
+    -webkit-touch-callout: none;
+    /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;
+    /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;
+    font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+
+/* Page Style */
+
+.page {
+    max-width: 640px;
+    min-width: 320px;
+}
+
+.page.ng-enter {
+    animation: slideIn 0.5s ease-out;
+    z-index: 5555;
+}
+
+.page.ng-leave {
+    animation: slideOut 0.25s ease-in;
+    z-index: 6666;
+}
+
+
+/* Compass */
+
+#compass {
+    width: 80%;
+    padding-top: 80%;
+    margin-left: 10%;
+    height: auto;
+    position: relative;
+    color: white;
+    border-radius: 50%;
+    -webkit-box-shadow: inset 0px 0px 0px 20px @gray;
+    -moz-box-shadow: inset 0px 0px 0px 20px @gray;
+    box-shadow: inset 0px 0px 0px 20px @gray;
+    .arrow {
+        width: 80%;
+        height: 80%;
+        background: url('../img/arrow.png') left center no-repeat;
+        background-size: 100% auto;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -moz-transition: all 1s ease;
+        -webkit-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+    .wind_data {
+        position: absolute;
+        top: 30%;
+        width: 100%;
+        text-align: center;
+        .wind_avg {
+            font-size: 48px;
+        }
+        .wind_dir {
+            font-size: 24px;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+        }
+        .wind_unit {
+            font-size: 18px;
+            letter-spacing: 10px;
+        }
+    }
+}
+
+.wind_data {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    .wind_avg {
+        font-size: 48px;
+    }
+    .wind_dir {
+        font-size: 24px;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+    }
+    .wind_unit {
+        font-size: 18px;
+        letter-spacing: 10px;
+    }
+}
+
+
+/* Animations */
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+}

@@ -1,0 +1,121 @@
+/* All Phones Landscape */
+
+/*
+COLOR SCHEME
+*/
+body {
+  background: #70c6e9;
+  -webkit-touch-callout: none;
+  /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none;
+  /* prevent webkit from resizing text to fit */
+  -webkit-user-select: none;
+  font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  color: white;
+}
+/* Page Style */
+.page {
+  margin-top: 20%;
+  max-width: 840px;
+  min-width: 320px;
+}
+.page.ng-enter {
+  animation: slideIn 0.5s ease-out;
+  z-index: 5555;
+}
+.page.ng-leave {
+  animation: slideOut 0.25s ease-in;
+  z-index: 6666;
+}
+/* Compass */
+#compass {
+  width: 80%;
+  padding-top: 80%;
+  margin-left: 10%;
+  height: auto;
+  position: relative;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0px 0px 0px 20px #4b5054;
+  -moz-box-shadow: inset 0px 0px 0px 20px #4b5054;
+  box-shadow: inset 0px 0px 0px 20px #4b5054;
+  background: #ec7262;
+}
+#compass .arrow {
+  width: 80%;
+  height: 80%;
+  background: url('../img/arrow.png') left center no-repeat;
+  background-size: 100% auto;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+#compass .wind_data {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+}
+#compass .wind_data .wind_avg {
+  font-size: 48px;
+}
+#compass .wind_data .wind_dir {
+  font-size: 24px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+#compass .wind_data .wind_unit {
+  font-size: 18px;
+  letter-spacing: 5px;
+}
+#compass.good-wind {
+  background: #72ca6d;
+}
+/* Extra Data */
+#extras {
+  width: 80%;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+#extras p {
+  font-size: 24px;
+}
+#extras p label {
+  width: 160px;
+}
+#extras p span {
+  float: right;
+}
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+}
